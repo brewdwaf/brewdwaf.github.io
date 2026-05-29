@@ -4,11 +4,51 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Paralele Istorice Publishing Dashboard</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.55; margin: 0; color: #171717; background: #fafafa; }
+    main { max-width: 860px; margin: 0 auto; padding: 48px 24px; }
+    h1 { font-size: 34px; margin: 0 0 12px; }
+    h2 { margin-top: 34px; font-size: 22px; }
+    p, li { font-size: 16px; }
+    .lede { font-size: 19px; color: #333; }
+    .panel { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 20px; margin-top: 18px; }
+    code { background: #f0f0f0; padding: 2px 5px; border-radius: 4px; }
+    a { color: #0b57d0; }
+  </style>
 </head>
 <body>
   <main>
     <h1>Paralele Istorice Publishing Dashboard</h1>
-    <p>Creator publishing workflow for original short-form history videos.</p>
+    <p class="lede">A creator publishing workflow for preparing and publishing original short-form history videos to connected social platforms, including TikTok.</p>
+
+    <div class="panel">
+      <h2>What the app does</h2>
+      <p>The dashboard helps the Paralele Istorice creator select an original video, review the publishing metadata, edit the caption and hashtags, choose visibility and interaction settings, and explicitly approve the upload before anything is posted.</p>
+    </div>
+
+    <div class="panel">
+      <h2>TikTok integration</h2>
+      <p>The TikTok integration uses Login Kit and the Content Posting API. After the creator connects their TikTok account, the app can show the connected account, prepare a Direct Post request, upload an approved video, poll publishing status, and report success or failure.</p>
+      <p>The app requests only the scopes needed for account identification, publishing, and creator-owned analytics: <code>user.info.basic</code>, <code>user.info.profile</code>, <code>user.info.stats</code>, <code>video.list</code>, and <code>video.publish</code>.</p>
+    </div>
+
+    <div class="panel">
+      <h2>Publishing flow</h2>
+      <ol>
+        <li>The creator selects a local original short-form video.</li>
+        <li>The app loads the campaign metadata: title, caption, hashtags, and platform notes.</li>
+        <li>The creator reviews and can edit the caption before publishing.</li>
+        <li>The creator reviews TikTok privacy and interaction settings.</li>
+        <li>The app shows a STOP preview and requires explicit approval before upload.</li>
+        <li>After approval, the app uploads the video and polls TikTok publishing status.</li>
+      </ol>
+    </div>
+
+    <div class="panel">
+      <h2>Safety and control</h2>
+      <p>The app never publishes silently. Every post requires a visible preview and an explicit creator confirmation. Credentials are stored locally in a git-ignored credentials folder controlled by the account owner.</p>
+    </div>
+
     <p><a href="/terms.html">Terms of Service</a> · <a href="/privacy.html">Privacy Policy</a></p>
   </main>
 </body>
